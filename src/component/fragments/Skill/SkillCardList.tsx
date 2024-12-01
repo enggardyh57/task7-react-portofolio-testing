@@ -8,10 +8,21 @@ interface SkillCardListProps {
 }
 
 const SkillCardList: React.FC<SkillCardListProps> = ({ cards, activeCard, handleCardClick }) => {
+    
   return (
-    <div className="card-container flex flex-wrap gap-8 justify-center items-center mt-12 px-4">
+    <div 
+      className="card-container flex flex-wrap gap-8 justify-center items-center mt-12 px-4"
+      data-testid="skill-card-list"  
+    >
       {cards.map((card, index) => (
-        <SkillCard key={index} icon={card.icon} title={card.title} isActive={activeCard === index} onClick={() => handleCardClick(index)} />
+        <SkillCard
+          key={index}
+          icon={card.icon}
+          title={card.title}
+          isActive={activeCard === index}
+          onClick={() => handleCardClick(index)}
+          data-testid={`skill-card-${index}`}  
+        />
       ))}
     </div>
   );

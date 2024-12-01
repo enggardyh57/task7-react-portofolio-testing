@@ -1,4 +1,3 @@
-import React from "react";
 import Label from "../../elements/Contact/Label";
 import Input from "../../elements/Contact/Input";
 import TextArea from "../../elements/Contact/TextArea";
@@ -10,7 +9,7 @@ interface ContactFormProps {
 
 const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
   return (
-    <form className="bg-seccondary p-8 rounded-xl shadow-md max-w-4xl mx-auto" onSubmit={onSubmit}>
+    <form className="bg-seccondary p-8 rounded-xl shadow-md max-w-4xl mx-auto" onSubmit={onSubmit} data-testid="contact-form">
       <div className="mb-4">
         <Label htmlFor="name" text="Full Name" className="text-white" />
         <Input id="name" type="text" placeholder="Your full name" required />
