@@ -1,3 +1,4 @@
+import React from "react";
 interface LabelProps {
   htmlFor: string;
   text: string;
